@@ -1,5 +1,4 @@
-{pkgs, ...}:
-{
+{ pkgs, ... }: {
   plugins = {
     lualine.enable = true;
 
@@ -42,6 +41,8 @@
           golines.enable = true;
           markdownlint.enable = true;
           prettier.enable = true;
+          trim_newlines.enable = true;
+          trim_whitespace.enable = true;
         };
       };
     };
@@ -51,7 +52,6 @@
     undotree.enable = true;
     fugitive.enable = true;
     nvim-tree.enable = true;
-    barbar.enable = true;
     indent-blankline.enable = true;
     todo-comments.enable = true;
     gitsigns.enable = true;
@@ -68,13 +68,12 @@
     lsp-format.enable = true;
   };
 
-  extraPlugins = with pkgs.vimPlugins; [ 
-    cheatsheet-nvim 
+  extraPlugins = with pkgs.vimPlugins; [
+    cheatsheet-nvim
     comment-nvim
     vim-sleuth
     nvim-neoclip-lua
     csv-vim
-    formatter-nvim
     telescope-zoxide
     vim-jsx-pretty
     html5-vim
@@ -99,6 +98,5 @@
 
   # To-do:
   #    use { "yuezk/vim-js" }
-
 
 }
