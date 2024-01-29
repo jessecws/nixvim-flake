@@ -156,11 +156,21 @@
       options.desc = "Turn highlights off";
     }
 
+    # Git Fugitive
     {
       mode = [ "n" ];
       key = "<leader>gs";
       action = "<cmd>Git<CR>";
       options.desc = "Git";
+    }
+
+    # gitworktrees
+    {
+      mode = [ "n" ];
+      key = "<leader>pw";
+      action =
+        "lua require('telescope').extensions.git_worktree.git_worktrees() ";
+      options.desc = "Telescope switch git worktrees";
     }
   ];
 }
