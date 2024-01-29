@@ -1,35 +1,7 @@
+{pkgs, ...}:
 {
   plugins = {
     lualine.enable = true;
-
-    nvim-cmp = {
-      enable = true;
-      autoEnableSources = true;
-      sources =
-        [{ name = "nvim_lsp"; } { name = "path"; } { name = "buffer"; }];
-
-      mapping = {
-        "<CR>" = "cmp.mapping.confirm({ select = true })";
-        "<Tab>" = {
-          action = ''
-            function(fallback)
-              if cmp.visible() then
-                cmp.select_next_item()
-              elseif luasnip.expandable() then
-                luasnip.expand()
-              elseif luasnip.expand_or_jumpable() then
-                luasnip.expand_or_jump()
-              elseif check_backspace() then
-                fallback()
-              else
-                fallback()
-              end
-            end
-          '';
-          modes = [ "i" "s" ];
-        };
-      };
-    };
 
     telescope = {
       enable = true;
@@ -74,12 +46,6 @@
       };
     };
 
-    luasnip.enable = true;
-    cmp-buffer.enable = true;
-    cmp-path.enable = true;
-    cmp_luasnip.enable = true;
-    cmp-nvim-lsp.enable = true;
-    cmp-nvim-lua.enable = true;
     friendly-snippets.enable = true;
     treesitter.enable = true;
     undotree.enable = true;
@@ -102,23 +68,17 @@
     lsp-format.enable = true;
   };
 
-  # To-do:
-  # add cheatsheet
-  # use {
-  #         'sudormrfbin/cheatsheet.nvim',
-  # 
-  #         requires = {
-  #             { 'nvim-telescope/telescope.nvim' },
-  #             { 'nvim-lua/popup.nvim' },
-  #             { 'nvim-lua/plenary.nvim' },
-  #         }
-  #     }
-
-  # To-do:
-  #    use { 'numToStr/Comment.nvim' }
-
-  # To-do:
-  #     use { 'tpope/vim-sleuth' }
+  extraPlugins = with pkgs.vimPlugins; [ 
+    cheatsheet-nvim 
+    comment-nvim
+    vim-sleuth
+    nvim-neoclip-lua
+    csv-vim
+    formatter-nvim
+    telescope-zoxide
+    vim-jsx-pretty
+    html5-vim
+  ];
 
   # To-do:
   # use {
@@ -135,22 +95,10 @@
   # }
 
   # To-do:
-  #     use { 'chrisbra/csv.vim' }
-
-  # To-do:
-  #     use { 'mhartington/formatter.nvim' }
-
-  # To-do:
-  #     use { 'jvgrootveld/telescope-zoxide' }
-
-  # To-do:
   #    use { 'cljoly/telescope-repo.nvim' }
 
   # To-do:
   #    use { "yuezk/vim-js" }
-  #    use { "maxmellon/vim-jsx-pretty" }
 
-  # To-do:
-  #    use { "othree/html5.vim" }
 
 }

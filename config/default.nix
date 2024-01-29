@@ -6,6 +6,7 @@
     ./keymaps.nix
     ./core.nix
     ./plugins.nix
+    ./cmp.nix
     ./lsp-servers.nix
   ];
 
