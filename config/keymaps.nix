@@ -10,7 +10,7 @@
       action = "<cmd>Telescope live_grep<CR>";
       key = "<leader>g";
     }
-    # Visual Block Motions 
+    # Visual Block Motions
     # Select text and move with vi dirction keys
     {
       mode = [ "v" ];
@@ -154,6 +154,13 @@
       key = "<leader>h";
       action = "<cmd>nohlsearch<CR>";
       options.desc = "Turn highlights off";
+    }
+
+    {
+      mode = [ "n" ];
+      key = "<leader>gs";
+      action = "<cmd>Git<CR>";
+      options.desc = "Git";
     }
   ];
 }
