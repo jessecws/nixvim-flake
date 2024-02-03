@@ -11,11 +11,6 @@
       };
     };
 
-    harpoon = {
-      enable = true;
-      enableTelescope = true;
-    };
-
     dap = {
       enable = true;
       extensions.dap-ui.enable = true;

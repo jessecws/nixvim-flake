@@ -8,6 +8,7 @@
     ./plugins.nix
     ./barbar.nix
     ./cmp.nix
+    ./harpoon.nix
     ./lsp-servers.nix
   ];
 
