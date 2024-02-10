@@ -2,44 +2,9 @@
   plugins = {
     lualine.enable = true;
 
-    telescope = {
-      enable = true;
-      extensions = {
-        file_browser.enable = true;
-        fzf-native.enable = true;
-        project-nvim.enable = true;
-      };
-    };
-
     dap = {
       enable = true;
       extensions.dap-ui.enable = true;
-    };
-
-    none-ls = {
-      enable = true;
-      enableLspFormat = true;
-      sources = {
-        code_actions = { gitsigns.enable = true; };
-        diagnostics = {
-          flake8.enable = true;
-          luacheck.enable = true;
-          markdownlint.enable = true;
-          pylint.enable = true;
-          yamllint.enable = true;
-        };
-        formatting = {
-          nixfmt.enable = true;
-          nixpkgs_fmt.enable = true;
-          black.enable = true;
-          gofmt.enable = true;
-          golines.enable = true;
-          markdownlint.enable = true;
-          prettier.enable = true;
-          trim_newlines.enable = true;
-          trim_whitespace.enable = true;
-        };
-      };
     };
 
     friendly-snippets.enable = true;
@@ -66,12 +31,12 @@
   extraPlugins = with pkgs.vimPlugins; [
     cheatsheet-nvim
     comment-nvim
-    vim-sleuth
-    nvim-neoclip-lua
     csv-vim
+    html5-vim
+    nvim-neoclip-lua
     telescope-zoxide
     vim-jsx-pretty
-    html5-vim
+    vim-sleuth
   ];
 
   # To-do:

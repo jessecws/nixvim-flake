@@ -1,4 +1,4 @@
-{
+{ pkgs, ... }: {
 
   plugins.harpoon = {
     enable = true;
@@ -18,7 +18,7 @@
         "3" = "<C-s>";
         "4" = "<C-a>";
       };
-      };
+    };
   };
 
 }
