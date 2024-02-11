@@ -4,4 +4,4 @@ This is a work in progress.
 
 ## To-do
 
-[ ] update keymaps for vim-fugitive
+- [ ] update keymaps for vim-fugitive
