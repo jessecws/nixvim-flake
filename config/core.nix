@@ -6,7 +6,11 @@
 
       clipboard = {
         register = "unnamedplus";
-        providers.xclip.enable = true;
+        providers = {
+          # wl-copy.enable = true;
+          xclip.enable = true;
+          # xsel.enable = true;
+        };
       };
     };
 
@@ -43,20 +47,20 @@
       colorcolumn = "80";
     };
 
-  extraConfigLua = ''
-    function ColorMyPencils(color)
-        color = color or "tokyonight-night"
-        vim.cmd.colorscheme(color)
+    extraConfigLua = ''
+      function ColorMyPencils(color)
+          color = color or "tokyonight-night"
+          vim.cmd.colorscheme(color)
 
-        -- vim.api.nvim_set_hl(0, "Normal", {bg = "none" })
-        -- vim.api.nvim_set_hl(0, "NormalFloat", {bg = "none" })
-        vim.cmd.highlight({ "LineNr", "guifg=#456dd6" })
-        vim.cmd.highlight({ "CursorLineNr", "guifg=yellow" })
+          -- vim.api.nvim_set_hl(0, "Normal", {bg = "none" })
+          -- vim.api.nvim_set_hl(0, "NormalFloat", {bg = "none" })
+          vim.cmd.highlight({ "LineNr", "guifg=#456dd6" })
+          vim.cmd.highlight({ "CursorLineNr", "guifg=yellow" })
 
-    end
+      end
 
-    ColorMyPencils()
-  '';
+      ColorMyPencils()
+    '';
 
   };
 }
