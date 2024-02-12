@@ -33,7 +33,7 @@
     comment-nvim
     csv-vim
     html5-vim
-    nvim-neoclip-lua
+    # nvim-neoclip-lua
     telescope-zoxide
     vim-jsx-pretty
     vim-sleuth
