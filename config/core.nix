@@ -30,6 +30,7 @@
 
       swapfile = false;
       backup = false;
+      # To-do: assign user var for undodir
       undodir = "/home/jherrera/.neovim/undodir";
       undofile = true;
 
