@@ -1,10 +1,25 @@
-{ pkgs, ... }: {
+{
+  extraConfigLua = ''
+    function _project_search()
+      local input = vim.fn.input("Grep > ")
+      require('telescope.builtin').live_grep({ default_text = input })
+    end
+  '';
+
+  keymaps = [{
+    mode = [ "n" ];
+    key = "<leader>ps";
+    action = "<cmd>lua _project_search()<CR>";
+    options.desc = "Project Search with Grep";
+    options.silent = true;
+    options.noremap = true;
+  }];
+
   plugins.telescope = {
     enable = true;
     extensions = {
       file_browser.enable = true;
       fzf-native.enable = true;
-      project-nvim.enable = true;
     };
     keymaps = {
       "<leader>pf" = {
@@ -15,11 +30,6 @@
         action = "git_files";
         desc = "Git Files";
       };
-      # "<leader>ps" = {
-      #   action = ''
-      #     function() grep_string({ search = vim.fn.input("Grep > ") }); end'';
-      #   desc = "Project Search with Grep";
-      # };
       "<leader>pg" = { action = "live_grep"; };
       "<leader>fb" = { action = "buffers"; };
       "<leader>fh" = { action = "help_tags"; };

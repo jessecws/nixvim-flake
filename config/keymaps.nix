@@ -6,10 +6,6 @@
       action = "<cmd>Explore<CR>";
       options.desc = "Open Netrw";
     }
-    {
-      action = "<cmd>Telescope live_grep<CR>";
-      key = "<leader>g";
-    }
     # Visual Block Motions
     # Select text and move with vi dirction keys
     {
