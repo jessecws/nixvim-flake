@@ -15,7 +15,6 @@ in
     require("cheatsheet").setup({
         bundled_cheatsheets = true,
         bundled_plugin_cheatsheets = true,
-        include_only_installed_plugins = true,
         telescope_mappings = {
             ['<CR>'] = require('cheatsheet.telescope.actions').select_or_execute,
             ['<A-CR>'] = require('cheatsheet.telescope.actions').select_or_fill_commandline,

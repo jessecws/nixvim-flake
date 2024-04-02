@@ -15,6 +15,7 @@
     ./none-ls.nix
     ./plugins.nix
     ./project-nvim.nix
+    ./telecheatsheet.nix
     ./telescope.nix
     ./toggleterm.nix
   ];
