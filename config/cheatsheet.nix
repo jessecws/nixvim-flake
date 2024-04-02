@@ -1,60 +1,27 @@
-{ pkgs, ... }: {
-  plugins = {
-    lualine.enable = true;
+{ pkgs, ... }:
+# To-do JH: get the cheatsheet.txt working
+let
+  cheatsheettxt = pkgs.writeText "cheatsheet.txt" ''
+    Open cheatsheet | <leader>?
+    Open cheatsheet in floating window | :CheatSheet!
 
-    dap = {
-      enable = true;
-      extensions.dap-ui.enable = true;
-    };
-
-    friendly-snippets.enable = true;
-    treesitter.enable = true;
-    undotree.enable = true;
-    fugitive.enable = true;
-    nvim-tree.enable = true;
-    indent-blankline.enable = true;
-    todo-comments.enable = true;
-    gitsigns.enable = true;
-    trouble.enable = true;
-    markdown-preview.enable = true;
-    git-worktree.enable = true;
-    treesitter-context.enable = true;
-    project-nvim.enable = true;
-    tmux-navigator.enable = true;
-    surround.enable = true;
-    ts-autotag.enable = true;
-    emmet.enable = true;
-    lsp-format.enable = true;
-  };
-
-  extraPlugins = with pkgs.vimPlugins; [
-    comment-nvim
-    csv-vim
-    html5-vim
-    # nvim-neoclip-lua
-    telescope-zoxide
-    vim-jsx-pretty
-    vim-sleuth
-  ];
-
-  # To-do:
-  # use {
-  #   "AckslD/nvim-neoclip.lua",
-  #   requires = {
-  #     {'kkharji/sqlite.lua', module = 'sqlite'},
-  #     -- you'll need at least one of these
-  #     -- {'nvim-telescope/telescope.nvim'},
-  #     -- {'ibhagwan/fzf-lua'},
-  #   },
-  #   config = function()
-  #     require('neoclip').setup()
-  #   end,
-  # }
-
-  # To-do:
-  #    use { 'cljoly/telescope-repo.nvim' }
-
-  # To-do:
-  #    use { "yuezk/vim-js" }
-
+    View mappings | :map [mapping]
+    Set text width to {n} | :set tw={n}
+  '';
+in
+{
+  extraPlugins = with pkgs.vimPlugins; [ cheatsheet-nvim ];
+  extraConfigLua = ''
+    require("cheatsheet").setup({
+        bundled_cheatsheets = true,
+        bundled_plugin_cheatsheets = true,
+        include_only_installed_plugins = true,
+        telescope_mappings = {
+            ['<CR>'] = require('cheatsheet.telescope.actions').select_or_execute,
+            ['<A-CR>'] = require('cheatsheet.telescope.actions').select_or_fill_commandline,
+            ['<C-Y>'] = require('cheatsheet.telescope.actions').copy_cheat_value,
+            ['<C-E>'] = require('cheatsheet.telescope.actions').edit_user_cheatsheet,
+        }
+    })
+  '';
 }
