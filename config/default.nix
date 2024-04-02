@@ -3,6 +3,7 @@
   imports = [
     ./barbar.nix
     ./bufferline.nix
+    ./cheatsheet.nix
     ./cmp.nix
     ./colorschemes.nix
     ./core.nix
