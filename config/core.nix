@@ -1,4 +1,15 @@
-{
+{ pkgs, ... }: let
+
+  currentSystemHome = builtins.getEnv "HOME";
+
+  evaledUndoDir = if currentSystemHome == "" 
+    then 
+      "/tmp/neovim/undodir" 
+    else 
+      "${currentSystemHome}/.neovim/undodir";
+  
+in {
+
   config = {
 
     globals = {
@@ -31,7 +42,7 @@
       swapfile = false;
       backup = false;
       # To-do: assign user var for undodir
-      undodir = "/home/jherrera/.neovim/undodir";
+      undodir = evaledUndoDir;
       undofile = true;
 
       hlsearch = true;
