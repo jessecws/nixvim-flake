@@ -1,14 +1,16 @@
-{ pkgs, ... }: let
+{ ... }:
+let
 
   currentSystemHome = builtins.getEnv "HOME";
 
-  evaledUndoDir = if currentSystemHome == "" 
-    then 
-      "/tmp/neovim/undodir" 
-    else 
+  evaledUndoDir =
+    if currentSystemHome == "" then
+      "/tmp/neovim/undodir"
+    else
       "${currentSystemHome}/.neovim/undodir";
-  
-in {
+
+in
+{
 
   config = {
 
