@@ -29,13 +29,11 @@
       action = "< gv";
     }
     # Vis Block Motions end
-
     {
       mode = [ "n" ];
       key = "J";
       action = "mzJ`z";
     }
-
     {
       mode = [ "n" ];
       key = "<C-d>";
@@ -56,14 +54,12 @@
       key = "N";
       action = "Nzzzv";
     }
-
     # greatest remap ever
     {
       mode = [ "x" ];
       key = "<leader>p";
       action = ''[["_dP]]'';
     }
-
     # next greatest remap ever : asbjornHaland
     {
       mode = [ "n" "v" ];
@@ -75,20 +71,11 @@
       key = "<leader>Y";
       action = ''[["+Y]]'';
     }
-
     {
       mode = [ "n" "v" ];
       key = "<leader>d";
       action = ''[["_d]]'';
     }
-
-    # This is going to get me cancelled
-    {
-      mode = [ "i" ];
-      key = "<C-c>";
-      action = "<Esc>";
-    }
-
     {
       mode = [ "n" ];
       key = "Q";
@@ -167,6 +154,13 @@
       action =
         "lua require('telescope').extensions.git_worktree.git_worktrees() ";
       options.desc = "Telescope switch git worktrees";
+    }
+    # meta v for visual block in MacOS
+    {
+      mode = [ "n" ];
+      key = "<leader>v";
+      action = ''<cmd>execute "normal! \<C-v>"<CR>'';
+      options.desc = "Enter Visual Block Mode";
     }
   ];
 }
