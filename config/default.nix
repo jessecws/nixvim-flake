@@ -13,11 +13,13 @@
     ./lazygit-toggleterm.nix
     ./lsp-servers.nix
     ./none-ls.nix
+    ./oil.nix
     ./plugins.nix
     ./project-nvim.nix
     ./telecheatsheet.nix
     ./telescope.nix
     ./toggleterm.nix
+    ./ufo.nix
   ];
 
 }

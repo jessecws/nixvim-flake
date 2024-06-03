@@ -10,36 +10,38 @@
     mode = [ "n" ];
     key = "<leader>ps";
     action = "<cmd>lua _project_search()<CR>";
-    options.desc = "Project Search with Grep";
-    options.silent = true;
-    options.noremap = true;
+    options = {
+      desc = "Project Search with Grep";
+      silent = true;
+      noremap = true;
+    };
   }];
 
   plugins.telescope = {
     enable = true;
     extensions = {
-      file_browser.enable = true;
+      file-browser.enable = true;
       fzf-native.enable = true;
     };
     keymaps = {
       "<leader>pf" = {
         action = "find_files";
-        desc = "Find files in the current Project";
+        options = { desc = "Find files in the current Project"; };
       };
       "<C-p>" = {
         action = "git_files";
-        desc = "Git Files";
+        options = { desc = "Git Files"; };
       };
       "<leader>pg" = { action = "live_grep"; };
       "<leader>fb" = { action = "buffers"; };
       "<leader>fh" = { action = "help_tags"; };
       "<leader>r" = {
         action = "keymaps";
-        desc = "Telescope Keymaps";
+        options = { desc = "Telescope Keymaps"; };
       };
       "<C-q>" = {
         action = "quickfix";
-        desc = "Quickfix List";
+        options = { desc = "Quickfix List"; };
       };
     };
   };
