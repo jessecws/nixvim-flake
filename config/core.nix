@@ -47,6 +47,11 @@ in
       undodir = evaledUndoDir;
       undofile = true;
 
+      foldlevelstart = 99;
+      foldcolumn = "1";
+      foldlevel = 99;
+      foldenable = true;
+
       hlsearch = true;
       incsearch = true;
 
