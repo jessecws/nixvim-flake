@@ -16,6 +16,7 @@
     ./oil.nix
     ./plugins.nix
     ./project-nvim.nix
+    ./rainboxcsv.nix
     ./telecheatsheet.nix
     ./telescope.nix
     ./toggleterm.nix
