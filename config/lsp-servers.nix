@@ -32,7 +32,7 @@
         yamlls.enable = true;
 
         # javascript / typescript
-        tsserver.enable = true;
+        ts-ls.enable = true;
 
         # lua
         lua-ls.enable = true;

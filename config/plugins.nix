@@ -21,7 +21,7 @@
     treesitter-context.enable = true;
     project-nvim.enable = true;
     tmux-navigator.enable = true;
-    surround.enable = true;
+    vim-surround.enable = true;
     ts-autotag.enable = true;
     emmet.enable = true;
     lsp-format.enable = true;
