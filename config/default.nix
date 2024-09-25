@@ -21,6 +21,7 @@
     ./telescope.nix
     ./toggleterm.nix
     ./ufo.nix
+    ./which-key.nix
   ];
 
 }
