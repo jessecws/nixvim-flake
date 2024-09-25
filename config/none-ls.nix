@@ -10,6 +10,7 @@
           markdownlint.enable = true;
           pylint.enable = true;
           yamllint.enable = true;
+          terragrunt_validate.enable = true;
         };
         formatting = {
           nixfmt.enable = true;
@@ -23,6 +24,7 @@
             enable = true;
             disableTsServerFormatter = true;
           };
+          terragrunt_fmt.enable = true;
         };
       };
     };
