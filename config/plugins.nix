@@ -25,6 +25,11 @@
     ts-autotag.enable = true;
     emmet.enable = true;
     lsp-format.enable = true;
+    mini = {
+      enable = true;
+      mockDevIcons = true;
+      modules.icons = { };
+    };
   };
 
   extraPlugins = with pkgs.vimPlugins; [

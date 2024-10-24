@@ -5,7 +5,10 @@
       servers = {
 
         # nix
-        nixd.enable = true;
+        nixd = {
+          enable = true;
+          settings.formatting.command = [ "alejandra" ];
+        };
 
         # ansible
         ansiblels.enable = true;
@@ -32,13 +35,13 @@
         yamlls.enable = true;
 
         # javascript / typescript
-        ts-ls.enable = true;
+        ts_ls.enable = true;
 
         # lua
-        lua-ls.enable = true;
+        lua_ls.enable = true;
 
         # rust
-        rust-analyzer = {
+        rust_analyzer = {
           enable = true;
           installCargo = true;
           installRustc = true;
