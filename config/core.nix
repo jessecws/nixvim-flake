@@ -52,7 +52,7 @@ in
       foldlevel = 99;
       foldenable = true;
 
-      hlsearch = true;
+      hlsearch = false;
       incsearch = true;
 
       termguicolors = true;

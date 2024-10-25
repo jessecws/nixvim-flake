@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ ... }: {
 
   plugins.harpoon = {
     enable = true;

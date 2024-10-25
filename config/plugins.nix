@@ -15,7 +15,6 @@
     indent-blankline.enable = true;
     todo-comments.enable = true;
     gitsigns.enable = true;
-    trouble.enable = true;
     markdown-preview.enable = true;
     git-worktree.enable = true;
     treesitter-context.enable = true;

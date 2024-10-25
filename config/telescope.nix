@@ -22,6 +22,14 @@
     extensions = {
       file-browser.enable = true;
       fzf-native.enable = true;
+      ui-select.enable = true;
+      undo = {
+        enable = true;
+        settings = {
+          time_format = "!%Y-%m-%dT%TZ";
+          vim_diff_opts = { ctxlen = 8; };
+        };
+      };
     };
     keymaps = {
       "<leader>pf" = {
@@ -35,6 +43,7 @@
       "<leader>pg" = { action = "live_grep"; };
       "<leader>fb" = { action = "buffers"; };
       "<leader>fh" = { action = "help_tags"; };
+      "<leader>u" = { action = "undo"; };
       "<leader>r" = {
         action = "keymaps";
         options = { desc = "Telescope Keymaps"; };

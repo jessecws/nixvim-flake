@@ -1,11 +1,11 @@
 {
   keymaps = [
-    {
-      mode = [ "n" ];
-      key = "<leader>pv";
-      action = "<cmd>Explore<CR>";
-      options.desc = "Open Netrw";
-    }
+    # {
+    #   mode = [ "n" ];
+    #   key = "<leader>pv";
+    #   action = "<cmd>Explore<CR>";
+    #   options.desc = "Open Netrw";
+    # }
     # Visual Block Motions
     # Select text and move with vi dirction keys
     {
@@ -54,7 +54,7 @@
       key = "N";
       action = "Nzzzv";
     }
-    # greatest remap ever
+    # Delete and paste buffer without overriding paste buffer
     {
       mode = [ "x" ];
       key = "<leader>p";
@@ -122,15 +122,15 @@
       options.desc = "substitute word under cursor";
     }
 
-    {
-      mode = [ "n" ];
-      key = "<leader>x";
-      action = "<cmd>!chmod +x %<CR>";
-      options = {
-        desc = "Change the current buffer to execute";
-        silent = true;
-      };
-    }
+    # {
+    #   mode = [ "n" ];
+    #   key = "<leader>x";
+    #   action = "<cmd>!chmod +x %<CR>";
+    #   options = {
+    #     desc = "Change the current buffer to execute";
+    #     silent = true;
+    #   };
+    # }
 
     {
       mode = [ "n" ];

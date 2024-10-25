@@ -20,6 +20,7 @@
     ./telecheatsheet.nix
     ./telescope.nix
     ./toggleterm.nix
+    ./trouble.nix
     ./ufo.nix
     ./which-key.nix
   ];
