@@ -15,6 +15,8 @@
     indent-blankline.enable = true;
     todo-comments.enable = true;
     gitsigns.enable = true;
+    nvim-autopairs.enable = true;
+    nvim-bqf.enable = true;
     markdown-preview.enable = true;
     git-worktree.enable = true;
     treesitter-context.enable = true;
