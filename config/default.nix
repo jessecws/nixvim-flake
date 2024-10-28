@@ -23,6 +23,7 @@
     ./trouble.nix
     ./ufo.nix
     ./which-key.nix
+    ./vim-test.nix
   ];
 
 }
