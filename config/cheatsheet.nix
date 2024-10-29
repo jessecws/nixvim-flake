@@ -3,6 +3,7 @@
     "cheatsheet.txt".text = ''
       quickfix move backward through jump list | <C-o>
       quickfix move forward through jump list | <C-i>
+      open terminal in new buffer | <C-a>
     '';
   };
   extraPlugins = with pkgs.vimPlugins; [ cheatsheet-nvim ];
