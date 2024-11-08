@@ -4,13 +4,19 @@
       enable = true;
       enableLspFormat = true;
       sources = {
-        code_actions = { gitsigns.enable = true; };
         hover.dictionary.enable = true;
+        code_actions = {
+          gitsigns.enable = true;
+          refactoring.enable = true;
+          statix.enable = true;
+        };
         diagnostics = {
           markdownlint.enable = true;
+          selene.enable = true;
           pylint.enable = true;
           yamllint.enable = true;
           terragrunt_validate.enable = true;
+          statix.enable = true;
         };
         formatting = {
           nixfmt.enable = true;
@@ -25,6 +31,7 @@
             disableTsServerFormatter = true;
           };
           terragrunt_fmt.enable = true;
+          stylua.enable = true;
         };
       };
     };

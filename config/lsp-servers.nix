@@ -42,12 +42,6 @@
       };
       servers = {
 
-        # nix
-        nixd = {
-          enable = true;
-          settings.formatting.command = [ "alejandra" ];
-        };
-
         # ansible
         ansiblels.enable = true;
 
@@ -74,9 +68,6 @@
 
         # javascript / typescript
         ts_ls.enable = true;
-
-        # lua
-        lua_ls.enable = true;
 
         # rust
         rust_analyzer = {
