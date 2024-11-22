@@ -1,6 +1,6 @@
 {
   extraConfigLua = ''
-    function _project_search()
+    function ProjectSearch()
       local input = vim.fn.input("Grep > ")
       require('telescope.builtin').live_grep({ default_text = input })
     end
@@ -9,7 +9,7 @@
   keymaps = [{
     mode = [ "n" ];
     key = "<leader>ps";
-    action = "<cmd>lua _project_search()<CR>";
+    action = "<cmd>lua ProjectSearch()<CR>";
     options = {
       desc = "Project Search with Grep";
       silent = true;
@@ -48,9 +48,23 @@
         action = "keymaps";
         options = { desc = "Telescope Keymaps"; };
       };
-      "<C-q>" = {
-        action = "quickfix";
-        options = { desc = "Quickfix List"; };
+    };
+    settings = {
+      defaults = {
+        mappings = {
+          i = {
+            "<C-q>" = {
+              __raw =
+                "require('telescope.actions').smart_send_to_qflist + require('telescope.actions').open_qflist";
+            };
+          };
+          n = {
+            "<C-q>" = {
+              __raw =
+                "require('telescope.actions').smart_send_to_qflist + require('telescope.actions').open_qflist";
+            };
+          };
+        };
       };
     };
   };
