@@ -57,8 +57,8 @@
         # html
         html.enable = true;
 
-        # markdown
-        marksman.enable = true;
+        # # markdown
+        # marksman.enable = true;
 
         #python
         pyright.enable = true;
