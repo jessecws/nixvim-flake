@@ -1,6 +1,7 @@
 {
   # Import all your configuration modules here
   imports = [
+    ./avante.nix
     ./barbar.nix
     ./bufferline.nix
     ./cheatsheet.nix
