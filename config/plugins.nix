@@ -2,11 +2,9 @@
   plugins = {
     lualine.enable = true;
 
-    dap = {
-      enable = true;
-      extensions.dap-ui.enable = true;
-    };
+    dap = { enable = true; };
 
+    dap-ui.enable = true;
     friendly-snippets.enable = true;
     treesitter.enable = true;
     undotree.enable = true;

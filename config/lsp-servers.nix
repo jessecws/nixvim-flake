@@ -79,10 +79,6 @@
         # terraform
         terraformls.enable = true;
 
-        # graphql
-        graphql.enable = true;
-
-        #
       };
     };
   };
