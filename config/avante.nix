@@ -1,13 +1,19 @@
 { pkgs, ... }: {
   extraPlugins = with pkgs.vimPlugins; [ img-clip-nvim ];
-  # extraConfigLua = ''
-  # '';
+  extraConfigLua = ''
+    require('img-clip').setup({ })
+  '';
   plugins.avante = {
     enable = true;
     settings = {
+      auto_suggestions_provider = "claude";
+      tokenizer = "tiktoken";
+      system_prompt = ''
+        You are an excellent programming expert.
+      '';
       claude = {
         endpoint = "https://api.anthropic.com";
-        max_tokens = 4096;
+        max_tokens = 8000;
         model = "claude-3-7-sonnet-20250219";
         temperature = 0;
       };
@@ -21,6 +27,13 @@
           current = "DiffText";
           incoming = "DiffAdd";
         };
+      };
+      behaviour = {
+        auto_suggestions = false;
+        auto_set_highlight_group = true;
+        auto_set_keymaps = true;
+        auto_apply_diff_after_generation = false;
+        support_paste_from_clipboard = false;
       };
       hints = { enabled = true; };
       mappings = {
@@ -39,7 +52,7 @@
           align = "center";
           rounded = true;
         };
-        width = 30;
+        width = 40;
         wrap = true;
       };
     };
