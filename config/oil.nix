@@ -30,7 +30,7 @@
         "g." = "actions.toggle_hidden";
         "q" = "actions.close";
       };
-      columns = [ "icon" "size" "permissions" "mtime" ];
+      # columns = [ "icon" "size" "permissions" "mtime" ];
       view_options = { show_hidden = true; };
     };
   };
